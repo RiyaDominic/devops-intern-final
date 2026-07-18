@@ -1,0 +1,21 @@
+Grafana Loki Setup
+
+1. Start Loki:
+
+docker run -d --name loki -p 3100:3100 grafana/loki:3.0.0
+
+2. Verify Loki:
+
+http://localhost:3100/ready
+
+Expected Output:
+
+ready
+
+3. View container logs:
+
+docker logs loki
+
+Grafana can be connected to Loki by adding
+http://localhost:3100
+as a Loki data source.
